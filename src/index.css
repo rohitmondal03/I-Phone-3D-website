@@ -85,7 +85,7 @@ body::-webkit-scrollbar-thumb {
   padding: 50px 0 400px 0;
   height: 100vh;
   box-sizing: border-box;
-  opacity: 0;
+  /* opacity: 0; */
   position: relative;
 }
 
@@ -146,7 +146,7 @@ body::-webkit-scrollbar-thumb {
 
 nav.nav-wrapper {
   margin: 0;
-  width: 100%;
+  /* width: 100vw; */
   min-width: 320px;
   height: 48px;
   max-height: 44px;
@@ -164,22 +164,22 @@ nav .nav-content {
 
 nav .list-styled {
   cursor: default;
-  margin: 0 -9px;
+  margin: 0 0px;
   width: auto;
   height: 44px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
 }
 
 nav .link-styled {
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 44px;
   color: #000000cc;
 }
@@ -279,6 +279,7 @@ nav .link-styled {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -328,7 +329,7 @@ nav .link-styled {
   display: flex;
   align-items: center;
   flex-direction: column;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .sound-section .title {
@@ -341,13 +342,11 @@ nav .link-styled {
 .sound-section .text {
   display: inline-block;
   color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    #1e3791 0%,
-    #2948b1 40%,
-    #3153c6 55%,
-    #385fda 60%
-  );
+  background-image: linear-gradient(90deg,
+      #1e3791 0%,
+      #2948b1 40%,
+      #3153c6 55%,
+      #385fda 60%);
   -webkit-background-clip: text;
   background-clip: text;
   padding-top: 0.5px;
@@ -399,6 +398,7 @@ nav .link-styled {
 }
 
 @media screen and (max-width: 990px) {
+
   .jumbotron-section .iphone-img,
   nav .link-styled {
     display: none;
