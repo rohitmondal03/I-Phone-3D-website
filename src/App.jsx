@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 // COMPONENTS
 import Nav from "./components/Nav";
@@ -9,13 +9,22 @@ import WebGiViewer from "./components/WebGiViewer";
 
 
 function App() {
+  const webGiViewerUserRef = useRef()
+  const contentRef = useRef()
+
+  const handlePreview = () => {
+    webGiViewerUserRef.current.triggerPreview();
+  }
+
   return (
     <div className="App">
-      <Nav />
-      <Jumbotron />
-      <SoundSection />
-      <DisplaySection />
-      <WebGiViewer />
+      <div ref={contentRef} id='content'>
+        <Nav />
+        <Jumbotron />
+        <SoundSection />
+        <DisplaySection triggerPreview={handlePreview} />
+      </div>
+      <WebGiViewer contentRef={contentRef} ref={webGiViewerUserRef} />
     </div>
   );
 }

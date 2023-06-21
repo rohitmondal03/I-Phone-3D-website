@@ -1,4 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
+
+const handleLearnMore = () => {
+    const element = document.querySelector('.display-section')
+    window.scrollTo({
+        top: element?.getBoundingClientRect().bottom,
+        left: 0,
+        behavior: 'smooth'
+    })
+}
 
 const SoundSection = () => {
     return (
@@ -13,7 +22,7 @@ const SoundSection = () => {
                             <button className='button'>Buy</button>
                         </li>
                         <li>
-                            <a className='link'>Learn More</a>
+                            <a className='link' onClick={handleLearnMore}>Learn More</a>
                         </li>
                     </ul>
                 </div>
