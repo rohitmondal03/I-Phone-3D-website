@@ -6,6 +6,7 @@ import Jumbotron from "./components/Jumbotron";
 import SoundSection from "./components/SoundSection";
 import DisplaySection from "./components/DisplaySection";
 import WebGiViewer from "./components/WebGiViewer";
+import Loader from "./components/Loader";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <Loader />
       <div ref={contentRef} id='content'>
         <Nav />
         <Jumbotron />
